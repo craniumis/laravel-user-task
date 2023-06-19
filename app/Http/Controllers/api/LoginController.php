@@ -11,11 +11,6 @@ class LoginController extends BaseController
 {
     //
 
-    public function index(Request $request){
-        $this->response_data["user"] = ["user"=>$request->user()];
-        return $this->sendJsonResponse();
-    }
-
     public function login(Request $request):JsonResponse
     {
         $validator = Validator::make($request->all(), [
